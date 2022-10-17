@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Box} from "@mui/material";
 import {StyledTypo, ButtonWrapper} from './styles'
-import StyledButton from "../button";
+import StyledButton from "../../components/button";
 
 const Banner = ({ title, imgLink }) => {
   let backgroundImg = {
