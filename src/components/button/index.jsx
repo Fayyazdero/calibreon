@@ -1,11 +1,12 @@
-import { Button } from '@mui/material'
-import React from 'react'
+import React from "react";
+import { Button } from "@mui/material";
 
-
-const StyledButton = ({text, variant, color}) => {
+const StyledButton = ({ text, variant, color }) => {
   return (
-   <Button variant={variant} sx={{marginRight: '10px', backgroundColor: `${color}`}}>{text}</Button>
-  )
-}
+    <Button variant={variant} sx={{ backgroundColor: `${color}` }}>
+      {text}
+    </Button>
+  );
+};
 
-export default StyledButton
+export default StyledButton;

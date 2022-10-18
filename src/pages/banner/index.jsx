@@ -18,7 +18,7 @@ const Banner = ({ title, imgLink }) => {
             </StyledTypo>
             <ButtonWrapper>
 
-            <StyledButton color='#f54c0a' variant='contained' text="Explore More!"/>
+            <StyledButton  variant='contained' text="Explore More!"/>
             <StyledButton variant='outlined' text='About Us!'/>
             </ButtonWrapper>
 

@@ -4,6 +4,18 @@ import { Box, Typography } from "@mui/material";
 export const ImageWrapper = styled(Box) ({
    
 })
+export const DetailsWrapper = styled(Box) ({
+   marginTop: '10px'
+})
+
+export const UserDetails = styled(Typography) ({
+    fontFamily: 'Poppins',
+    fontWeight: '300',
+    fontStyle: 'normal',
+    fontSize: '1rem',
+    marginTop: '11px'
+})
+
 export const UserName = styled(Typography) ({
     fontFamily: 'Poppins',
     fontWeight: '400',
@@ -12,12 +24,9 @@ export const UserName = styled(Typography) ({
    
 })
 export const ProfileWrapper = styled(Box) ({
-    boxSizing: 'border-box',
-    padding: '20px',
     overflow: 'hidden',
-    background: '#f54c0a',
-    borderBottomRightRadius: '20px',
-    borderTopRightRadius: '20px'
+    cursor: 'grabbing',
+    background: '#fff',
     
 })
 export const UserRole = styled(Typography) ({
@@ -30,8 +39,10 @@ export const UserRole = styled(Typography) ({
     letterSpacing: '1px'
 })
 export const Image = styled('img') ({
-    borderBottomRightRadius: '20px',
-    borderTopRightRadius: '20px',
-    height: '200px',
+    height: '300px',
     width: '100%',
 })
+export const ProfileContentWrapper = styled(Box) ({
+    padding: '20px'
+})
+

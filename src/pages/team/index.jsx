@@ -1,9 +1,9 @@
 import React from "react";
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { Container } from "@mui/system";
 import Profile from "../../components/profile";
 import Fayyaz from "./../../assests/user.jpeg";
-import { Item } from "./styles";
+import { Item, StyledBox } from "./styles";
 
 const Team = () => {
   const users = [
@@ -11,21 +11,27 @@ const Team = () => {
       name: "Fayyaz Karim",
       role: "Web Developer",
       img: Fayyaz,
+      userDetails:
+        "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
     },
     {
       name: "Fayyaz",
       role: "Web Developer",
       img: Fayyaz,
+      userDetails:
+        "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
     },
     {
       name: "Fayyaz",
       role: "Web Developer",
       img: Fayyaz,
+      userDetails:
+        "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
     },
   ];
 
   return (
-    <Box>
+    <StyledBox>
       <Container>
         <Grid container spacing={2}>
           {users.map((item, key) => {
@@ -36,6 +42,7 @@ const Team = () => {
                     userImg={item.img}
                     userName={item.name}
                     userRole={item.role}
+                    userDetails={item.userDetails}
                   />
                 </Item>
               </Grid>
@@ -43,7 +50,7 @@ const Team = () => {
           })}
         </Grid>
       </Container>
-    </Box>
+    </StyledBox>
   );
 };
 
