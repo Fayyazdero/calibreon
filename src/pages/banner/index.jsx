@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, Box} from "@mui/material";
-import {StyledTypo, ButtonWrapper} from './styles'
-import StyledButton from "../../components/button";
+import { Container, Box } from "@mui/material";
+import { StyledTypo, ButtonWrapper } from "./styles";
+import Button from "../../components/button";
 
 const Banner = ({ title, imgLink }) => {
   let backgroundImg = {
@@ -10,21 +10,19 @@ const Banner = ({ title, imgLink }) => {
     backgroundImage: `url(${imgLink})`,
   };
   return (
-      <Box style={backgroundImg}>
-        <Box>
-          <Container>
-            <StyledTypo variant="h5" sx={{ paddingTop:'65px'}}>
-              {title}
-            </StyledTypo>
-            <ButtonWrapper>
-
-            <StyledButton  variant='contained' text="Explore More!"/>
-            <StyledButton variant='outlined' text='About Us!'/>
-            </ButtonWrapper>
-
-          </Container>
-        </Box>
+    <Box style={backgroundImg}>
+      <Box>
+        <Container>
+          <StyledTypo variant="h5" sx={{ paddingTop: "65px" }}>
+            {title}
+          </StyledTypo>
+          <ButtonWrapper>
+            <Button variant='contained'>Explore More!</Button>
+            <Button variant='outlined'>About Us</Button>
+          </ButtonWrapper>
+        </Container>
       </Box>
+    </Box>
   );
 };
 

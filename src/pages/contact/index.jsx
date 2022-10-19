@@ -4,7 +4,6 @@ import {
   ContactHeading,
   ContactDesc,
   ContactWrapper,
-  StyledButton,
   StyledBox,
   FormWrapper,
   ContactMessage,
@@ -13,9 +12,9 @@ import {
   StyledInput,
   StyledTextArea,
   ButtonWrapper,
-    SubmitButton
 
 } from "./styles";
+import Button from "../../components/button";
 
 const Contact = () => {
   return (
@@ -31,7 +30,7 @@ const Contact = () => {
                 Get on a call. Talk to an expert. Get your (automated,
                 done-for-you) accounting solution.
               </ContactDesc>
-              <StyledButton variant="contained">Schedule a Call</StyledButton>
+              <Button variant="outlined">Schedule a Call</Button>
             </ContactWrapper>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -49,8 +48,7 @@ const Contact = () => {
                     <StyledTextArea aria-label="Hello" placeholder="Name" minRows={5}/>
               </InputWrapper>
               <ButtonWrapper>
-
-              <SubmitButton variant="contained">Send Message</SubmitButton>
+                  <Button variant='contained'>Send Message</Button>
               </ButtonWrapper>
             </FormWrapper>
           </Grid>

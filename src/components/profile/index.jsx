@@ -1,4 +1,7 @@
 import React from "react";
+import Facebook from "../svgs/Facebook";
+import Linkedin from "../svgs/Linkedin";
+import Mail from "../svgs/Mail";
 import {
   Image,
   ImageWrapper,
@@ -8,6 +11,7 @@ import {
   UserDetails,
   DetailsWrapper,
   ProfileContentWrapper,
+  SocialIcons,
 } from "./styles";
 
 const Profile = ({ userImg, userName, userRole, userDetails }) => {
@@ -17,15 +21,20 @@ const Profile = ({ userImg, userName, userRole, userDetails }) => {
         <Image src={userImg} alt={userName} />
       </ImageWrapper>
       <ProfileContentWrapper>
-        <UserRole variant="h4">{userRole}</UserRole>
-        <UserName variant="h4" align="left">
+        <UserRole>{userRole}</UserRole>
+        <UserName >
           {userName}
         </UserName>
         <DetailsWrapper>
-          <UserDetails variant="p" align="left">
+          <UserDetails>
             {userDetails}
           </UserDetails>
         </DetailsWrapper>
+        <SocialIcons>
+            <Facebook/>
+            <Linkedin/>
+            <Mail/>
+        </SocialIcons>
       </ProfileContentWrapper>
     </ProfileWrapper>
   );

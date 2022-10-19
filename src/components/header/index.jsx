@@ -1,7 +1,8 @@
 import * as React from 'react';
-import {AppBar, Container, Button, MenuItem, Menu, Toolbar, Box, IconButton, Typography} from '@mui/material';
+import {AppBar, Container, MenuItem, Menu, Toolbar, Box, IconButton, Typography} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
+import Button from '../button';
 
 const pages = ['Products', 'About Us', 'Blog', 'Team', 'Services'];
 
@@ -18,6 +19,7 @@ const Header = () => {
 
 
   return (
+    
     <AppBar position="static" sx={{backgroundColor: '#fff', height: '92px', justifyContent: 'center'}}>
       <Container>
         <Toolbar disableGutters>
@@ -39,7 +41,7 @@ const Header = () => {
             LOGO
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },  }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', color: '#f54c0a' },  }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -108,7 +110,7 @@ const Header = () => {
 
           <Box sx={{ flexGrow: 0 }}>
             
-            Hellop
+            <Button variant="contained" >Contact Us</Button>
           </Box>
         </Toolbar>
       </Container>

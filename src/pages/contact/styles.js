@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Typography, Button, Box, Input, TextareaAutosize } from "@mui/material";
+import { Typography, Box, Input, TextareaAutosize } from "@mui/material";
 
 export const ContactHeading = styled(Typography)({
   fontFamily: "Poppins",
@@ -36,10 +36,7 @@ export const StyledBox = styled(Box)({
   backgroundColor: "#f54c0a",
 });
 
-export const StyledButton = styled(Button)({
-  backgroundColor: "#fff",
-  color: "#f54c0a",
-});
+
 export const ContactMessage = styled(Typography)({
   fontFamily: "Poppins",
   fontSize: "32px",
@@ -89,13 +86,6 @@ export const StyledTextArea = styled(TextareaAutosize)({
     
     })
 
-export const SubmitButton = styled(Button)({
-    fontSize: '16px',
-    fontFamily: 'Poppins',
-    color: '#fff',
-    backgroundColor: '#f54c0a'
-    
-    })
 export const ButtonWrapper = styled(Box)({
     fontSize: '16px',
     fontFamily: 'Poppins',
