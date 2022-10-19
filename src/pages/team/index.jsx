@@ -4,7 +4,14 @@ import { Container } from "@mui/system";
 import Profile from "../../components/profile";
 import Fayyaz from "./../../assests/user.jpeg";
 import MD from "./../../assests/md.jpg";
-import { Item, StyledBox } from "./styles";
+import {
+  Item,
+  StyledBox,
+  StyledGrid,
+  TeamHeading,
+  TeamHeadingWrapper,
+  TeamText,
+} from "./styles";
 
 const Team = () => {
   const users = [
@@ -34,7 +41,14 @@ const Team = () => {
   return (
     <StyledBox>
       <Container>
-        <Grid container spacing={4}>
+        <TeamHeadingWrapper>
+          <TeamHeading>Our Team</TeamHeading>
+          <TeamText>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </TeamText>
+        </TeamHeadingWrapper>
+        <StyledGrid container spacing={4}>
           {users.map((item, key) => {
             return (
               <Grid item xs={12} sm={6} md={4}>
@@ -49,7 +63,7 @@ const Team = () => {
               </Grid>
             );
           })}
-        </Grid>
+        </StyledGrid>
       </Container>
     </StyledBox>
   );

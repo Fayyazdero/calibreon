@@ -33,32 +33,31 @@ export const Item = styled(Paper) ({
     borderRadius: 'none'
   });
 
-  export const AddressWrapper = styled('div') ({
-    marginTop: '40px',
-    fontSize: '14px',
-    lineHeight: '24px',
-    textDecoration: 'none',
-    color: '#748494',
-  })
+  export const AddressWrapper = styled.div`
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #748494;
+  `
 
-  export const Address = styled('p') ({
-  })
+  export const Address = styled.p``
 
-  export const IconsWrapper = styled('div') ({
-    marginTop: '80px',
-    display: 'flex',
-    justifyContent: 'space-between'
-  })
+  export const IconsWrapper = styled.div`
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between
+  `
 
-  export const Contact = styled('p') ({
-    marginTop: '80px'
-  })
+  export const Contact = styled.p`
+    margin-top: 80px;
+`
 
-  export const DesignedBy = styled('p') ({
-    textAlign: 'center',
-    fontSize: '14px',
-    lineHeight: '24px',
-    textDecoration: 'none',
-    color: '#748494',
-    marginTop: '40px'
-  })
+  export const DesignedBy = styled.p`
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #748494;
+    margin-top: 40px;
+  `

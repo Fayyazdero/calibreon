@@ -36,9 +36,9 @@ export const UserRole = styled.h4`
     font-family: Poppins;
     text-transform: uppercase;
     font-size: 1rem;
-    font-weight: 700;
-    color: #b3b3b3;
-    margin: 0 0 13px 0;
+    font-weight: 400;
+    color: #f54c0a;
+    margin: 0 0 5px 0;
     letter-spacing: 1px;
 `
 

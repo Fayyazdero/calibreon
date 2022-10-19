@@ -3,6 +3,8 @@ import {AppBar, Container, MenuItem, Menu, Toolbar, Box, IconButton, Typography}
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
 import Button from '../button';
+import { LogoWrapper } from './styles';
+import Calibreon from './../../assests/ci.png'
 
 const pages = ['Products', 'About Us', 'Blog', 'Team', 'Services'];
 
@@ -23,24 +25,9 @@ const Header = () => {
     <AppBar position="static" sx={{backgroundColor: '#fff', height: '92px', justifyContent: 'center'}}>
       <Container>
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: '#f54c0a',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
-
+            <LogoWrapper>
+              <img src={Calibreon} alt="Calibreon" />
+            </LogoWrapper>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', color: '#f54c0a' },  }}>
             <IconButton
               size="large"
