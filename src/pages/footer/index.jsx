@@ -92,8 +92,9 @@ const Footer = () => {
             </Item>
           </StyledGrid>
         </StyledGrid>
-        <DesignedBy>© 2022 CALIBREON INTERNATIONAL PVT. LTD. ALL RIGHTS RESERVED. DESIGNED BY NORTHSPEX</DesignedBy>
       </Container>
+      <DesignedBy>© 2022 CALIBREON INTERNATIONAL PVT. LTD. ALL RIGHTS RESERVED. DESIGNED BY NORTHSPEX</DesignedBy>
+
     </Box>
   );
 };

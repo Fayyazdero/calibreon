@@ -1,14 +1,13 @@
 import React from "react";
 
-function Linkedin() {
+function Linkedin({height, color}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="36"
-      height="36"
+      height={height}
       viewBox="0 0 24 24"
       fill="none"
-      stroke="#f54c0a"
+      stroke={color}
       stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"

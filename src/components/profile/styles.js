@@ -25,10 +25,14 @@ export const ProfileWrapper = styled.div`
     overflow: hidden;
     cursor: grabbing;
     background: #fff;
-    transition: all .2s ease-in-out;
 
     &:hover {
-        transform: scale(1.1);
+        img {
+    transition: all .2s ease-in-out;
+
+            transform: scale(1.1);
+
+        }
     }
     
 `
@@ -36,7 +40,7 @@ export const UserRole = styled.h4`
     font-family: Poppins;
     text-transform: uppercase;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 700;
     color: #f54c0a;
     margin: 0 0 5px 0;
     letter-spacing: 1px;
@@ -53,7 +57,6 @@ export const ProfileContentWrapper = styled.div`
 
 export const SocialIcons = styled.div`
     display: flex;
-    justify-content: space-between;
-    padding: 25px 0 0 0
+    column-gap: 20px;
 `
 

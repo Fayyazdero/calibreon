@@ -1,14 +1,13 @@
 import React from "react";
 
-function Facebook() {
+function Facebook({height, color}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="30"
-      height="30"
+      height={height}
       viewBox="0 0 24 24"
       fill="none"
-      stroke="#f54c0a"
+      stroke={color}
       stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"

@@ -1,12 +1,26 @@
-import * as React from 'react';
-import {AppBar, Container, MenuItem, Menu, Toolbar, Box, IconButton, Typography} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import AdbIcon from '@mui/icons-material/Adb';
-import Button from '../button';
-import { LogoWrapper } from './styles';
-import Calibreon from './../../assests/ci.png'
+import * as React from "react";
+import {
+  AppBar,
+  Container,
+  MenuItem,
+  Menu,
+  Toolbar,
+  Box,
+  IconButton,
+  Typography,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import AdbIcon from "@mui/icons-material/Adb";
+import Button from "../button";
+import { LogoWrapper } from "./styles";
+import Calibreon from "./../../assests/ci.png";
 
-const pages = ['Products', 'About Us', 'Blog', 'Team', 'Services'];
+const pages = [
+  { title: "Home", path: "/home" },
+  { title: "About Us", path: "/about" },
+  { title: "Our Services", path: "/services" },
+  { title: 'Team', path: '/team'}
+];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -19,16 +33,22 @@ const Header = () => {
     setAnchorElNav(null);
   };
 
-
   return (
-    
-    <AppBar position="static" sx={{backgroundColor: '#fff', height: '92px', justifyContent: 'center'}}>
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: "#fff", height: "92px", justifyContent: "center" }}
+    >
       <Container>
         <Toolbar disableGutters>
-            <LogoWrapper>
-              <img src={Calibreon} alt="Calibreon" />
-            </LogoWrapper>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', color: '#f54c0a' },  }}>
+          <LogoWrapper>
+            <img src={Calibreon} alt="Calibreon" />
+          </LogoWrapper>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none", color: "#f54c0a" },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -43,28 +63,28 @@ const Header = () => {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
+                vertical: "bottom",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' }
+                display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {pages.map((item) => (
+                <MenuItem key={item} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{item.title}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -72,32 +92,36 @@ const Header = () => {
             href=""
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'none' },
+              display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: 'monospace',
+              fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: '#f54c0a',
-              textDecoration: 'none',
+              letterSpacing: ".3rem",
+              color: "#f54c0a",
+              textDecoration: "none",
             }}
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: 'center' } }}>
-            {pages.map((page) => (
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex", justifyContent: "center" },
+            }}
+          >
+            {pages.map((item) => (
               <Button
-                key={page}
+                key={item}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: '#f54c0a', display: 'block' }}
+                sx={{ my: 2, color: "#f54c0a", display: "block" }}
               >
-                {page}
+                {item.title}
               </Button>
             ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            
-            <Button variant="contained" >Contact Us</Button>
+            <Button variant="contained">Contact Us</Button>
           </Box>
         </Toolbar>
       </Container>
