@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import { Container } from "@mui/system";
-import Profile from "../../components/profile";
+import ProfileCard from "../../components/profileCard";
 import Fayyaz from "./../../assests/user.jpeg";
 import MD from "./../../assests/md.jpg";
 import {
@@ -48,21 +48,19 @@ const Team = () => {
             nisi ut aliquip ex ea commodo consequat.
           </TeamText>
         </TeamHeadingWrapper>
-        <StyledGrid container spacing={4}>
-          {users.map((item, key) => {
-            return (
-              <Grid item xs={12} sm={6} md={4}>
-                <Item>
-                  <Profile
-                    userImg={item.img}
-                    userName={item.name}
-                    userRole={item.role}
-                    userDetails={item.userDetails}
-                  />
-                </Item>
-              </Grid>
-            );
-          })}
+        <StyledGrid container spacing={[4]}>
+          {users.map((item, key) => (
+            <Grid item xs={12} sm={6} md={4} key={key}>
+              <Item>
+                <ProfileCard
+                  userImg={item.img}
+                  userName={item.name}
+                  userRole={item.role}
+                  userDetails={item.userDetails}
+                />
+              </Item>
+            </Grid>
+          ))}
         </StyledGrid>
       </Container>
     </StyledBox>

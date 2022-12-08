@@ -1,14 +1,30 @@
-import * as React from 'react';
-import {AppBar, Container, MenuItem, Menu, Toolbar, Box, IconButton, Typography} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import AdbIcon from '@mui/icons-material/Adb';
-import Button from '../button';
-import { LogoWrapper } from './styles';
-import Calibreon from './../../assests/ci.png'
+import * as React from "react";
+import {
+  AppBar,
+  MenuItem,
+  Menu,
+  Toolbar,
+  Box,
+  IconButton,
+  Typography,
+} from "@mui/material";
+import { Container } from "@mui/system";
+import { useNavigate } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
+import AdbIcon from "@mui/icons-material/Adb";
+import Button from "../button";
+import { LogoWrapper } from "./styles";
+import Calibreon from "./../../assests/ci.png";
 
-const pages = ['Products', 'About Us', 'Blog', 'Team', 'Services'];
+const pages = [
+  { name: "Home", key: "/" },
+  { name: "About Us", key: "/about" },
+  { name: "Blog", key: "/blog" },
+  { name: "Services", key: "/services" },
+];
 
 const Header = () => {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -18,17 +34,29 @@ const Header = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-
+  const onClickLink = (e) => {
+    navigate(e);
+    setAnchorElNav(null);
+  };
+  const onClickContact = () => {
+    navigate("/contact");
+  };
   return (
-    
-    <AppBar position="static" sx={{backgroundColor: '#fff', height: '92px', justifyContent: 'center'}}>
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: "#fff", height: "92px", justifyContent: "center" }}
+    >
       <Container>
         <Toolbar disableGutters>
-            <LogoWrapper>
-              <img src={Calibreon} alt="Calibreon" />
-            </LogoWrapper>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', color: '#f54c0a' },  }}>
+          <LogoWrapper>
+            <img src={Calibreon} alt="Calibreon" />
+          </LogoWrapper>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none", color: "#f54c0a" },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -43,61 +71,49 @@ const Header = () => {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
+                vertical: "bottom",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' }
+                display: { xs: "block", md: "none" },
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.key} onClick={() => onClickLink(page.key)}>
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
+          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+
+          <Box
             sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: '#f54c0a',
-              textDecoration: 'none',
+              display: { xs: "none", md: "flex", justifyContent: "flex-end" },
             }}
           >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: 'center' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: '#f54c0a', display: 'block' }}
+                key={page.key}
+                onClick={() => onClickLink(page.key)}
+                sx={{ color: "#f54c0a", display: "block" }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
-            
-            <Button variant="contained" >Contact Us</Button>
+            <Button variant="contained" onClick={onClickContact}>
+              Contact Us
+            </Button>
           </Box>
         </Toolbar>
       </Container>

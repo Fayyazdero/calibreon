@@ -11,7 +11,7 @@ import {
   MenuLinks,
   Address,
   Contact,
-  IconsWrapper
+  IconsWrapper,
 } from "./styles";
 import { Instagram, LinkedIn, Twitter, Facebook } from "@mui/icons-material";
 
@@ -51,7 +51,11 @@ const Footer = () => {
               <FooterItem title={"Menu"}>
                 <LinksWrapper>
                   {routes.map((item, key) => {
-                    return <MenuLinks href={item.path}>{item.name}</MenuLinks>;
+                    return (
+                      <MenuLinks href={item.path} key={item.name}>
+                        {item.name}
+                      </MenuLinks>
+                    );
                   })}
                 </LinksWrapper>
               </FooterItem>
@@ -82,17 +86,19 @@ const Footer = () => {
                   </Address>
                 </AddressWrapper>
                 <IconsWrapper>
-                    <Facebook/>
-                    <LinkedIn/>
-                    <Twitter/>
-                    <Instagram/>
-
+                  <Facebook />
+                  <LinkedIn />
+                  <Twitter />
+                  <Instagram />
                 </IconsWrapper>
               </FooterItem>
             </Item>
           </StyledGrid>
         </StyledGrid>
-        <DesignedBy>© 2022 CALIBREON INTERNATIONAL PVT. LTD. ALL RIGHTS RESERVED. DESIGNED BY NORTHSPEX</DesignedBy>
+        <DesignedBy>
+          © 2022 CALIBREON INTERNATIONAL PVT. LTD. ALL RIGHTS RESERVED. DESIGNED
+          BY NORTHSPEX
+        </DesignedBy>
       </Container>
     </Box>
   );

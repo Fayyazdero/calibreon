@@ -7,7 +7,6 @@ export const StyledButton = styled.button`
     color: ${props => props.variant === 'contained' ? "#ffffff" : "#f54c0a"};
     border: ${props => props.variant === 'contained' ? "1px solid #f54c0a" : 'none'};
     padding: 0 20px;
-    margin-right: 10px;
     border-radius: 4px;
     cursor: pointer;
     transition: all .2s ease-in-out;
