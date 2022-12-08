@@ -17,10 +17,10 @@ import { LogoWrapper } from "./styles";
 import Calibreon from "./../../assests/ci.png";
 
 const pages = [
-  { name: "Home", key: "/" },
-  { name: "About Us", key: "/about" },
-  { name: "Blog", key: "/blog" },
-  { name: "Services", key: "/services" },
+  { title: "Home", path: "/home" },
+  { title: "About Us", path: "/about" },
+  { title: "Our Services", path: "/services" },
+  { title: "Team", path: "/team" },
 ];
 
 const Header = () => {
@@ -85,9 +85,9 @@ const Header = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page.key} onClick={() => onClickLink(page.key)}>
-                  <Typography textAlign="center">{page.name}</Typography>
+              {pages.map((item) => (
+                <MenuItem key={item} onClick={() => onClickLink(item.path)}>
+                  <Typography textAlign="center">{item.title}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -97,16 +97,16 @@ const Header = () => {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", md: "flex", justifyContent: "flex-end" },
+              display: { xs: "none", md: "flex", justifyContent: "center" },
             }}
           >
-            {pages.map((page) => (
+            {pages.map((item) => (
               <Button
-                key={page.key}
-                onClick={() => onClickLink(page.key)}
-                sx={{ color: "#f54c0a", display: "block" }}
+                key={item}
+                onClick={() => onClickLink(item.path)}
+                sx={{ my: 2, color: "#f54c0a", display: "block" }}
               >
-                {page.name}
+                {item.title}
               </Button>
             ))}
           </Box>

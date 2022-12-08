@@ -31,9 +31,9 @@ const Profile = ({ userImg, userName, userRole, userDetails }) => {
           </UserDetails>
         </DetailsWrapper>
         <SocialIcons>
-            <Facebook/>
-            <Linkedin/>
-            <Mail/>
+            <Facebook height='30px' color="#f54c0a"/>
+            <Linkedin height='30px' color="#f54c0a"/>
+            <Mail height='30px' color="#f54c0a"/>
         </SocialIcons>
       </ProfileContentWrapper>
     </ProfileWrapper>

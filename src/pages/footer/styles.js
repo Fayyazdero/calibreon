@@ -59,5 +59,7 @@ export const Item = styled(Paper) ({
     line-height: 24px;
     text-decoration: none;
     color: #748494;
-    margin-top: 40px;
-  `
+    background: #ededed;
+    padding: 25px;
+    margin: 0;
+    `
