@@ -12,25 +12,53 @@ import {
   StyledInput,
   StyledTextArea,
   ButtonWrapper,
-
+  ContactDetails,
+  ContactItem,IconsWrapper
 } from "./styles";
 import Button from "../../components/button";
+import Location from "../../components/svgs/Location";
+import Phone from "../../components/svgs/Phone";
+import Mail from "../../components/svgs/Mail";
+import { Instagram, LinkedIn, Twitter, Facebook } from "@mui/icons-material";
 
 const Contact = () => {
+  const contactDetails = [
+    {
+      icon: <Location height="30px" color="#fff" />,
+      info: "Near Heli Chowk Zulfiqarabad Gilgit",
+    },
+    {
+      icon: <Phone height="30px" color="#fff" />,
+      info: "(647) 749-7224",
+    },
+    {
+      icon: <Mail height="30px" color="#fff" />,
+      info: "contact@calibreoninternational.com",
+    },
+  ];
   return (
     <StyledBox>
       <Container>
+        <ContactHeading variant="h2">Get in Touch</ContactHeading>
+        <ContactDesc title="subheading">We are here to help you</ContactDesc>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <ContactWrapper>
-              <ContactHeading variant="h2">
-                Contact <br /> Us
-              </ContactHeading>
-              <ContactDesc>
-                Get on a call. Talk to an expert. Get your (automated,
-                done-for-you) accounting solution.
-              </ContactDesc>
-              <Button variant="outlined">Schedule a Call</Button>
+              <ContactHeading variant="h4">Contact Information</ContactHeading>
+              <ContactDetails>
+                {contactDetails.map((item, index) => (
+                  <ContactItem key={index}>
+                    {item.icon}
+                    <ContactDesc>{item.info}</ContactDesc>
+                  </ContactItem>
+                ))}
+              </ContactDetails>
+              <IconsWrapper>
+                  <Facebook />
+                  <LinkedIn />
+                  <Twitter />
+                  <Instagram />
+                </IconsWrapper>
             </ContactWrapper>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -43,12 +71,16 @@ const Contact = () => {
                 shortly.
               </ContactText>
               <InputWrapper>
-                    <StyledInput placeholder="Name"/>
-                    <StyledInput placeholder="Email Adress"/>
-                    <StyledTextArea aria-label="Hello" placeholder="Name" minRows={5}/>
+                <StyledInput placeholder="Name" />
+                <StyledInput placeholder="Email Adress" />
+                <StyledTextArea
+                  aria-label="Hello"
+                  placeholder="Message"
+                  minRows={5}
+                />
               </InputWrapper>
               <ButtonWrapper>
-                  <Button variant='contained'>Send Message</Button>
+                <Button variant="contained">Send Message</Button>
               </ButtonWrapper>
             </FormWrapper>
           </Grid>

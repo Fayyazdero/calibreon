@@ -11,7 +11,7 @@ const About = () => {
         <Container>
           <Grid container spacing={[4]}>
             <Grid item xs={12} sm={12} md={8}>
-              <AboutHeading>About</AboutHeading>
+              <AboutHeading>About us</AboutHeading>
               <AboutDesc>
                 We are an online accounting and bookkeeping firm that eliminates
                 financial frustration while you run your successful business!

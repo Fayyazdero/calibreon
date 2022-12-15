@@ -14,7 +14,6 @@ export const AboutDesc = styled(Typography)({
   letterSpacing: "0.22px",
   fontSize: "22px",
   color: "#fff",
-  fontWeight: "bold",
   lineHeight: "1.5",
   marginTop: "40px",
   marginBottom: "40px",

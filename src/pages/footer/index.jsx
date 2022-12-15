@@ -23,19 +23,15 @@ const Footer = () => {
     },
     {
       name: "Services",
-      path: "/",
-    },
-    {
-      name: "Pricing",
-      path: "/",
+      path: "/services",
     },
     {
       name: "Contact",
-      path: "/",
+      path: "/contact",
     },
     {
-      name: "Blog",
-      path: "/",
+      name: "About us",
+      path: "/about"
     },
     {
       name: "Team",

@@ -4,12 +4,14 @@ import Banner from "./../../pages/banner";
 
 const Carousel = () => {
   let settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
+    arrows: false,
+    speed: 1000,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
+    autoplay: true,
   };
   const sliderData = [
     {

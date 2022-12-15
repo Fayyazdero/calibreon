@@ -63,7 +63,7 @@ const Mission = () => {
         </ImagesBox>
         <TeamBox>
           <TeamSubHeading>WE ARE HERE FOR YOU</TeamSubHeading>
-          <MissionHeading>Meet the Team</MissionHeading>
+          <MissionHeading>Meet the Co-Founders</MissionHeading>
         </TeamBox>
         <TeamCards>
           <Grid container spacing={[18]}>

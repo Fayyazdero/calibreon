@@ -1,23 +1,22 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import {
   AppBar,
   MenuItem,
   Menu,
-  Toolbar,
   Box,
   IconButton,
   Typography,
 } from "@mui/material";
 import { Container } from "@mui/system";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import AdbIcon from "@mui/icons-material/Adb";
 import Button from "../button";
-import { LogoWrapper } from "./styles";
+import { LogoWrapper, ToolbarBox } from "./styles";
 import Calibreon from "./../../assests/ci.png";
 
 const pages = [
-  { title: "Home", path: "/home" },
+  { title: "Home", path: "/" },
   { title: "About Us", path: "/about" },
   { title: "Our Services", path: "/services" },
   { title: "Team", path: "/team" },
@@ -25,7 +24,13 @@ const pages = [
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [active, setActive] = React.useState("/");
+
+  useEffect(() => {
+    setActive(location.pathname);
+  }, [location.pathname]);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -47,7 +52,7 @@ const Header = () => {
       sx={{ backgroundColor: "#fff", height: "92px", justifyContent: "center" }}
     >
       <Container>
-        <Toolbar disableGutters>
+        <ToolbarBox disableGutters>
           <LogoWrapper>
             <img src={Calibreon} alt="Calibreon" />
           </LogoWrapper>
@@ -105,6 +110,7 @@ const Header = () => {
                 key={item}
                 onClick={() => onClickLink(item.path)}
                 sx={{ my: 2, color: "#f54c0a", display: "block" }}
+                className={item.path === active ? "active" : ""}
               >
                 {item.title}
               </Button>
@@ -115,7 +121,7 @@ const Header = () => {
               Contact Us
             </Button>
           </Box>
-        </Toolbar>
+        </ToolbarBox>
       </Container>
     </AppBar>
   );

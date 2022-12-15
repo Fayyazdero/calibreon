@@ -13,27 +13,36 @@ import {
   ProfileContentWrapper,
   SocialIcons,
 } from "./styles";
+import { useNavigate } from "react-router-dom";
 
 const Profile = ({ userImg, userName, userRole, userDetails }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/home/contact/${userName}`, {
+      state: {
+        userName: userName,
+        userImg: userImg,
+        userRole: userRole,
+        userDetails: userDetails,
+      },
+    });
+  };
   return (
-    <ProfileWrapper>
+    <ProfileWrapper onClick={handleClick}>
       <ImageWrapper>
         <Image src={userImg} alt={userName} />
       </ImageWrapper>
       <ProfileContentWrapper>
         <UserRole>{userRole}</UserRole>
-        <UserName >
-          {userName}
-        </UserName>
+        <UserName>{userName}</UserName>
         <DetailsWrapper>
-          <UserDetails>
-            {userDetails}
-          </UserDetails>
+          <UserDetails>{userDetails}</UserDetails>
         </DetailsWrapper>
         <SocialIcons>
-            <Facebook height='30px' color="#f54c0a"/>
-            <Linkedin height='30px' color="#f54c0a"/>
-            <Mail height='30px' color="#f54c0a"/>
+          <Facebook height="30px" color="#f54c0a" />
+          <Linkedin height="30px" color="#f54c0a" />
+          <Mail height="30px" color="#f54c0a" />
         </SocialIcons>
       </ProfileContentWrapper>
     </ProfileWrapper>

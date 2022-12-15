@@ -38,23 +38,26 @@ export const ImagesBox = styled(Box)({
   img: {
     borderRadius: "5px 5px 5px 5px",
   },
+
   "& .absolatedImage": {
     position: "absolute",
     "& :first-child": {
-      width: "292px",
+      width: "280px",
       height: "278px",
       textAlign: "center",
       top: "218px",
-      left: "-190px",
-
-      // transform:
-      //   "translate3d(-39.954px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)",
+      left: "-430px",
+      position: "absolute",
     },
-    "& :second-child": {
-      left: "395px",
-      top: "120px",
-      width: "365px",
+    "& :last-child": {
+      left: "170px",
+      top: "160px",
+      width: "320px",
       textAlign: "center",
+      position: "absolute",
+    },
+    "@media (max-width: 900px)": {
+      display: "none !important",
     },
   },
 });
@@ -65,5 +68,6 @@ export const TeamBox = styled(Box)({
   textAlign: "center",
 });
 export const TeamCards = styled(Box)({
-  marginTop: "10rem",
+  marginTop: "8rem",
+  marginBottom: "8rem",
 });
