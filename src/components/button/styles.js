@@ -1,18 +1,5 @@
 import styled from "@emotion/styled";
-const variants = {
-  contained: {
-    color: "red",
-  },
 
-  outlined: {
-    color: "yellow",
-  },
-
-  default: {
-    color: "blue",
-  },
-};
-// color: ${(props) => props.variant === variants[props].color || "#ffffff"};
 export const StyledButton = styled.button`
   font-family: Poppins;
   background: ${(props) =>

@@ -13,18 +13,20 @@ import {
   StyledTextArea,
   ButtonWrapper,
   ContactDetails,
-  ContactItem,IconsWrapper
+  ContactItem,
+  IconsWrapper,
 } from "./styles";
 import Button from "../../components/button";
-import Location from "../../components/svgs/Location";
 import Phone from "../../components/svgs/Phone";
 import Mail from "../../components/svgs/Mail";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import SendIcon from "@mui/icons-material/Send";
 import { Instagram, LinkedIn, Twitter, Facebook } from "@mui/icons-material";
 
 const Contact = () => {
   const contactDetails = [
     {
-      icon: <Location height="30px" color="#fff" />,
+      icon: <LocationOnIcon />,
       info: "Near Heli Chowk Zulfiqarabad Gilgit",
     },
     {
@@ -54,11 +56,11 @@ const Contact = () => {
                 ))}
               </ContactDetails>
               <IconsWrapper>
-                  <Facebook />
-                  <LinkedIn />
-                  <Twitter />
-                  <Instagram />
-                </IconsWrapper>
+                <Facebook />
+                <LinkedIn />
+                <Twitter />
+                <Instagram />
+              </IconsWrapper>
             </ContactWrapper>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -80,7 +82,9 @@ const Contact = () => {
                 />
               </InputWrapper>
               <ButtonWrapper>
-                <Button variant="contained">Send Message</Button>
+                <Button variant="contained">
+                  Send Message <SendIcon />
+                </Button>
               </ButtonWrapper>
             </FormWrapper>
           </Grid>

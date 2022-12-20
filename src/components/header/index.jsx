@@ -110,7 +110,7 @@ const Header = () => {
                 key={item}
                 onClick={() => onClickLink(item.path)}
                 sx={{ my: 2, color: "#f54c0a", display: "block" }}
-                className={item.path === active ? "active" : ""}
+                className={item.path === active ? "active" : "btn"}
               >
                 {item.title}
               </Button>

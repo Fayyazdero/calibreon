@@ -66,9 +66,9 @@ const Mission = () => {
           <MissionHeading>Meet the Co-Founders</MissionHeading>
         </TeamBox>
         <TeamCards>
-          <Grid container spacing={[18]}>
+          <Grid container spacing={[2]}>
             {users.map((item, key) => (
-              <Grid item xs={12} sm={6} md={6} key={key}>
+              <Grid item xs={12} sm={6} md={4} key={key}>
                 <TeamCard
                   userImg={item.img}
                   userName={item.name}

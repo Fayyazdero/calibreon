@@ -1,4 +1,5 @@
 import React from "react";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import {
   Image,
   ImageWrapper,
@@ -21,6 +22,7 @@ const ServicesCard = ({ serviceImg, serviceName, serviceDetails }) => {
           <ServicesDetails>{serviceDetails}</ServicesDetails>
         </DetailsWrapper>
       </ServicesContentWrapper>
+      <ArrowForwardIcon />
     </ServicesWrapper>
   );
 };

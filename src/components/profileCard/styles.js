@@ -49,7 +49,7 @@ export const Image = styled('img') ({
     width: '100%',
 })
 export const ProfileContentWrapper = styled.div`
-    padding: 5px 20px 20px 20px
+    padding: 14px 20px 20px 20px
 `
 
 export const SocialIcons = styled.div`

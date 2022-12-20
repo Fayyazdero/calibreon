@@ -8,7 +8,7 @@ export const LogoWrapper = styled.div`
 `;
 export const ToolbarBox = styled(Toolbar)({
   position: "relative",
-  "& .MuiBox-root button:hover": {
+  "& .MuiBox-root .btn:hover": {
     color: "#f54c0a",
   },
   "& .active": {

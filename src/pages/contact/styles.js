@@ -106,20 +106,34 @@ export const ButtonWrapper = styled(Box)({
   fontSize: "16px",
   fontFamily: "Poppins",
   textAlign: "center",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  "& :first-child": {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  "& svg" : {
+    marginLeft: "0.6rem"
+  }
 });
-export const ContactDetails = styled(Box)({
-});
+export const ContactDetails = styled(Box)({});
 export const ContactItem = styled(Box)({
   display: "flex",
   alignItems: "center",
+  "& svg": {
+    color: "#ffffff",
+    fontSize: "2.3rem",
+  },
 });
 export const IconsWrapper = styled("div")({
   marginTop: "80px",
   marginBottom: "3rem",
   display: "flex",
-  justifyContent: "space-between",
   paddingRight: "3rem",
   "& svg": {
+    marginRight: "2rem",
     color: "#ffffff",
     cursor: "pointer",
   },

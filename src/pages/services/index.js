@@ -1,6 +1,11 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
-import MD from "../../assests/team.jpg";
+import Ideate from "../../assests/ideate.png";
+import Design from "../../assests/design.png";
+import Web from "../../assests/web.png";
+import App from "../../assests/app.png";
+import Business from "../../assests/business.png";
+import Marketing from "../../assests/marketing.png";
 import { useNavigate } from "react-router-dom";
 import {
   AboutHeading,
@@ -12,6 +17,7 @@ import {
   GuidContent,
   CardsBox,
   ContactDetailsBox,
+  Details,
 } from "./styles";
 import ServicesCard from "../../components/servicesCard";
 import Viewed from "../../components/viewItems";
@@ -28,22 +34,40 @@ const Services = () => {
   };
   const services = [
     {
-      name: "Audit & Assurance",
-      img: MD,
+      name: "Ideate",
+      img: Ideate,
       serviceDetails:
-        "Financial statement audits give assurance over information used by investors and the capital markets.",
+        "We help you develop creative ideas so that your business can grow more rapidly",
     },
     {
-      name: "Audit & Assurance",
-      img: MD,
+      name: "Design",
+      img: Design,
       serviceDetails:
-        "Financial statement audits give assurance over information used by investors and the capital markets.",
+        "We provide services with the best designs than our designer team for your business",
     },
     {
-      name: "Audit & Assurance",
-      img: MD,
+      name: "Web Development",
+      img: Web,
       serviceDetails:
-        "Financial statement audits give assurance over information used by investors and the capital markets.",
+        "We help develop company websites to be more professional and attractive",
+    },
+    {
+      name: "App Development",
+      img: App,
+      serviceDetails:
+        "We help develop company mobile apps to be more professional and attractive",
+    },
+    {
+      name: "Business Growth",
+      img: Business,
+      serviceDetails:
+        "We also provide services by providing input for your business growth",
+    },
+    {
+      name: "Degital Marketing",
+      img: Marketing,
+      serviceDetails:
+        "We also help you market your products through an online marketplace",
     },
   ];
   const onClickContact = () => {
@@ -102,8 +126,11 @@ const Services = () => {
       </Container>
       <ContactDetailsBox>
         <Container>
-          <AboutDesc>Let's Chat</AboutDesc>
-          <Button onClick={onClickContact}>Contact Us</Button>
+          <Details>
+            <AboutDesc variant="span">Are you Ready to </AboutDesc>
+            <AboutHeading variant="h3">Start with us</AboutHeading>
+            <Button onClick={onClickContact}>Contact Us</Button>
+          </Details>
         </Container>
       </ContactDetailsBox>
     </MainBox>
