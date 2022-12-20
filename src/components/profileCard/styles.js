@@ -25,13 +25,10 @@ export const ProfileWrapper = styled.div`
     overflow: hidden;
     cursor: grabbing;
     background: #fff;
-
     &:hover {
         img {
     transition: all .2s ease-in-out;
-
             transform: scale(1.1);
-
         }
     }
     
@@ -52,11 +49,10 @@ export const Image = styled('img') ({
     width: '100%',
 })
 export const ProfileContentWrapper = styled.div`
-    padding: 5px 20px 20px 20px
+    padding: 14px 20px 20px 20px
 `
 
 export const SocialIcons = styled.div`
     display: flex;
     column-gap: 20px;
 `
-

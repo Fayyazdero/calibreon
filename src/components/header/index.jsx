@@ -1,29 +1,36 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import {
   AppBar,
-  Container,
   MenuItem,
   Menu,
-  Toolbar,
   Box,
   IconButton,
   Typography,
 } from "@mui/material";
+import { Container } from "@mui/system";
+import { useNavigate, useLocation } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import AdbIcon from "@mui/icons-material/Adb";
 import Button from "../button";
-import { LogoWrapper } from "./styles";
+import { LogoWrapper, ToolbarBox } from "./styles";
 import Calibreon from "./../../assests/ci.png";
 
 const pages = [
-  { title: "Home", path: "/home" },
+  { title: "Home", path: "/" },
   { title: "About Us", path: "/about" },
   { title: "Our Services", path: "/services" },
-  { title: 'Team', path: '/team'}
+  { title: "Team", path: "/team" },
 ];
 
 const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [active, setActive] = React.useState("/");
+
+  useEffect(() => {
+    setActive(location.pathname);
+  }, [location.pathname]);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -32,14 +39,20 @@ const Header = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
+  const onClickLink = (e) => {
+    navigate(e);
+    setAnchorElNav(null);
+  };
+  const onClickContact = () => {
+    navigate("/contact");
+  };
   return (
     <AppBar
       position="static"
       sx={{ backgroundColor: "#fff", height: "92px", justifyContent: "center" }}
     >
       <Container>
-        <Toolbar disableGutters>
+        <ToolbarBox disableGutters>
           <LogoWrapper>
             <img src={Calibreon} alt="Calibreon" />
           </LogoWrapper>
@@ -78,31 +91,14 @@ const Header = () => {
               }}
             >
               {pages.map((item) => (
-                <MenuItem key={item} onClick={handleCloseNavMenu}>
+                <MenuItem key={item} onClick={() => onClickLink(item.path)}>
                   <Typography textAlign="center">{item.title}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "#f54c0a",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography>
+
           <Box
             sx={{
               flexGrow: 1,
@@ -112,18 +108,20 @@ const Header = () => {
             {pages.map((item) => (
               <Button
                 key={item}
-                onClick={handleCloseNavMenu}
+                onClick={() => onClickLink(item.path)}
                 sx={{ my: 2, color: "#f54c0a", display: "block" }}
+                className={item.path === active ? "active" : "btn"}
               >
                 {item.title}
               </Button>
             ))}
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
-            <Button variant="contained">Contact Us</Button>
+            <Button variant="contained" onClick={onClickContact}>
+              Contact Us
+            </Button>
           </Box>
-        </Toolbar>
+        </ToolbarBox>
       </Container>
     </AppBar>
   );

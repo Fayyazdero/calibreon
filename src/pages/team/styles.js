@@ -8,7 +8,8 @@ export const Item = styled(Paper)({
 });
 
 export const StyledGrid = styled(Grid)({
-  margin: '80px 0'
+  marginBottom: "80px",
+  marginTop: "40px !important",
 });
 
 export const StyledBox = styled.div`

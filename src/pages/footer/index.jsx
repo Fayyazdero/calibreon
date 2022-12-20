@@ -11,7 +11,7 @@ import {
   MenuLinks,
   Address,
   Contact,
-  IconsWrapper
+  IconsWrapper,
 } from "./styles";
 import { Instagram, LinkedIn, Twitter, Facebook } from "@mui/icons-material";
 
@@ -23,19 +23,15 @@ const Footer = () => {
     },
     {
       name: "Services",
-      path: "/",
-    },
-    {
-      name: "Pricing",
-      path: "/",
+      path: "/services",
     },
     {
       name: "Contact",
-      path: "/",
+      path: "/contact",
     },
     {
-      name: "Blog",
-      path: "/",
+      name: "About us",
+      path: "/about"
     },
     {
       name: "Team",
@@ -51,7 +47,11 @@ const Footer = () => {
               <FooterItem title={"Menu"}>
                 <LinksWrapper>
                   {routes.map((item, key) => {
-                    return <MenuLinks href={item.path}>{item.name}</MenuLinks>;
+                    return (
+                      <MenuLinks href={item.path} key={item.name}>
+                        {item.name}
+                      </MenuLinks>
+                    );
                   })}
                 </LinksWrapper>
               </FooterItem>
@@ -82,11 +82,10 @@ const Footer = () => {
                   </Address>
                 </AddressWrapper>
                 <IconsWrapper>
-                    <Facebook/>
-                    <LinkedIn/>
-                    <Twitter/>
-                    <Instagram/>
-
+                  <Facebook />
+                  <LinkedIn />
+                  <Twitter />
+                  <Instagram />
                 </IconsWrapper>
               </FooterItem>
             </Item>
