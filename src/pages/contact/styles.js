@@ -32,7 +32,8 @@ export const ContactWrapper = styled("div")({
 });
 
 export const StyledBox = styled(Box)({
-  height: "100vh",
+  height: "auto",
+  padding:"52px 0px",
   display: "flex",
   alignItems: "center",
   backgroundColor: "#f54c0a",

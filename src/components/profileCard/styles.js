@@ -1,6 +1,13 @@
 import styled from "@emotion/styled";
 
-export const ImageWrapper = styled.div``
+export const ImageWrapper = styled.div`
+// transition: .5s ease;
+// display:none;
+&:hover{
+transform: scale(1.1);
+}
+transition: all .3s ease-in-out;
+`
 export const DetailsWrapper = styled.div`
    margin-top: 10px;
 `
@@ -25,11 +32,7 @@ export const ProfileWrapper = styled.div`
     overflow: hidden;
     cursor: grabbing;
     background: #fff;
-    &:hover {
-        img {
-    transition: all .2s ease-in-out;
-            transform: scale(1.1);
-        }
+    
     }
     
 `
