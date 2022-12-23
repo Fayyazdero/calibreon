@@ -1,42 +1,12 @@
 import styled from "@emotion/styled";
 import { Typography, Box, Input, TextareaAutosize } from "@mui/material";
 
-export const ContactHeading = styled(Typography)`
-  font-family: Poppins;
-  font-size: ${(props) => (props.variant === "h4" ? "32px" : "70px")};
-  color: #fff;
-  font-weight: bold;
-  line-height: 1;
-  text-align: ${(props) => (props.variant === "h4" ? "left" : "center")};
-  margin-top: ${(props) => (props.variant === "h4" ? "2.5rem" : "")};
-`;
-
-export const ContactDesc = styled(Typography)`
-  font-family: Poppins;
-  letter-spacing: 0.22px;
-  font-size: ${(props) => (props.title === "subheading" ? "24px" : "16px")};
-  color: #fff;
-  line-height: 1.5;
-  textalign: center;
-  padding: 1rem;
-  margin-bottom: ${(props) => (props.title === "subheading" ? "3rem" : "")};
-  text-align: ${(props) => (props.title === "subheading" ? "center" : "left")};
-`;
-
 export const ContactWrapper = styled("div")({
   padding: "0 20px",
   display: "flex",
   height: "100%",
   flexDirection: "column",
   justifyContent: "space-between",
-});
-
-export const StyledBox = styled(Box)({
-  height: "auto",
-  padding:"52px 0px",
-  display: "flex",
-  alignItems: "center",
-  backgroundColor: "#f54c0a",
 });
 
 export const ContactMessage = styled(Typography)({
@@ -115,9 +85,9 @@ export const ButtonWrapper = styled(Box)({
     alignItems: "center",
     justifyContent: "center",
   },
-  "& svg" : {
-    marginLeft: "0.6rem"
-  }
+  "& svg": {
+    marginLeft: "0.6rem",
+  },
 });
 export const ContactDetails = styled(Box)({});
 export const ContactItem = styled(Box)({

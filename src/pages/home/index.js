@@ -9,7 +9,12 @@ import ServicesCard from "../../components/servicesCard";
 import TestimonialsCard from "../../components/testimonialsCard";
 import { Container, Grid } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { AboutHeading, StyledBox, AboutDesc, TestimonialsBox } from "./styles";
+import {
+  Section,
+  Heading,
+  Discription,
+  MainWrapper,
+} from "../../components/common";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -23,6 +28,7 @@ const HomePage = () => {
     {
       name: "Business Growth",
       img: Business,
+      active: true,
       serviceDetails:
         "We also provide services by providing input for your business growth",
     },
@@ -71,48 +77,50 @@ const HomePage = () => {
   return (
     <div>
       <Slider />
-      <Team />
-      <StyledBox>
+      <Section>
         <Container>
-          <AboutHeading>Our Services</AboutHeading>
-          <AboutDesc>
+          <Heading>Our Services</Heading>
+          <Discription align="center">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.
-          </AboutDesc>
-          <Grid container spacing={[3]}>
-            {services.map((item, key) => (
-              <Grid item xs={12} sm={6} md={4} key={key}>
-                <ServicesCard
-                  serviceImg={item.img}
-                  serviceName={item.name}
-                  serviceDetails={item.serviceDetails}
-                />
-              </Grid>
-            ))}
-          </Grid>
-          <AboutDesc variant="span" onClick={ClickServices}>
-            See more <ArrowForwardIcon />
-          </AboutDesc>
+          </Discription>
+          <MainWrapper>
+            <Grid container spacing={[3]}>
+              {services.map((item, key) => (
+                <Grid item xs={12} sm={6} md={4} key={key}>
+                  <ServicesCard
+                    serviceImg={item.img}
+                    serviceName={item.name}
+                    serviceDetails={item.serviceDetails}
+                    active={item.active}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+            <Discription title="more" onClick={ClickServices}>
+              See more <ArrowForwardIcon />
+            </Discription>
+          </MainWrapper>
         </Container>
-      </StyledBox>
-      <TestimonialsBox>
+      </Section>
+      <Team />
+      <Section>
         <Container>
-          <AboutHeading color="black">Testimonials</AboutHeading>
-          <AboutDesc color="black">
+          <Heading>Testimonials</Heading>
+          <Discription align="center">
             Some testimonials from our customers
-          </AboutDesc>
-          <Grid container spacing={[3]}>
-            {testimonialsData.map((item, key) => (
-              <Grid item xs={12} sm={6} md={4} key={key}>
-                <TestimonialsCard
-                  name={item.name}
-                  comment={item.comment}
-                />
-              </Grid>
-            ))}
-          </Grid>
+          </Discription>
+          <MainWrapper>
+            <Grid container spacing={[8]}>
+              {testimonialsData.map((item, key) => (
+                <Grid item xs={12} sm={6} md={4} key={key}>
+                  <TestimonialsCard name={item.name} comment={item.comment} />
+                </Grid>
+              ))}
+            </Grid>
+          </MainWrapper>
         </Container>
-      </TestimonialsBox>
+      </Section>
       <Contact />
     </div>
   );

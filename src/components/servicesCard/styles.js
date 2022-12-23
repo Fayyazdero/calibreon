@@ -10,23 +10,29 @@ export const DetailsWrapper = styled.div`
   margin-top: 10px;
 `;
 
-export const ServicesDetails = styled.p`
-  font-family: Poppins;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 16px;
-  margin-top: 11px 0 0 0;
-  color: #54595f;
-`;
+export const ServicesDetails = styled("p")((props) => ({
+  fontFamily: "Poppins",
+  fontWeight: "300",
+  fontStyle: "normal",
+  fontSize: "16px",
+  marginTop: "11px 0 0 0",
+  color: "#54595f",
+  display: "flex",
+  alignItems: "center",
+  "&:hover": {
+    color: props.text === "detail" ? "#f54c0a" : "",
+    fontWeight: props.text === "detail" ? "bold" : "",
+  },
+}));
 
 export const UserName = styled.h4`
   font-family: Poppins;
-  font-weight: bold;
+  font-weight: bold; 
   font-size: 1.2rem;
   line-height: 1.2;
   margin: 0;
 `;
-export const ServicesWrapper = styled("div")({
+export const ServicesWrapper = styled("div")((props) => ({
   background: "#fff",
   textAlign: "center",
   display: "flex",
@@ -35,16 +41,11 @@ export const ServicesWrapper = styled("div")({
   alignItems: "center",
   padding: "0 20px",
   position: "relative",
+  boxShadow: props.active  ? "rgba(17, 17, 26, 0.1) 0px 0px 16px" : " ",
   "&:hover": {
-    border: "1px solid #f54c0a !important",
+    boxShadow: "rgba(0, 0, 0, 0.15) 0px 5px 15px 0px",
   },
-  "& svg": {
-    position: "absolute",
-    cursor: "pointer",
-    bottom: "0",
-    marginBottom: "1rem",
-  },
-});
+}));
 
 export const Image = styled("img")({
   height: "100px",
@@ -52,6 +53,26 @@ export const Image = styled("img")({
   transitionDuration: "0.3s",
   "&:hover": {
     transform: "scale(1.1)",
+  },
+});
+export const DetailsSection = styled("div")({
+  position: "absolute",
+  cursor: "pointer",
+  bottom: "0",
+  marginBottom: "1rem",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  "& svg": {
+    color: "#f54c0a",
+    marginLeft: "1rem",
+  },
+  "&:hover": {
+    fontWeight: "bold",
+    color: "#f54c0a",
+    "& svg": {
+      transform: "translate(10px)",
+    },
   },
 });
 export const ServicesContentWrapper = styled("div")({

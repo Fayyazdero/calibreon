@@ -42,6 +42,7 @@ const Services = () => {
     {
       name: "Design",
       img: Design,
+      active: true,
       serviceDetails:
         "We provide services with the best designs than our designer team for your business",
     },
@@ -60,6 +61,7 @@ const Services = () => {
     {
       name: "Business Growth",
       img: Business,
+      active: true,
       serviceDetails:
         "We also provide services by providing input for your business growth",
     },
@@ -100,6 +102,7 @@ const Services = () => {
                     serviceImg={item.img}
                     serviceName={item.name}
                     serviceDetails={item.serviceDetails}
+                    active={item.active}
                   />
                 </Grid>
               ))}

@@ -7,18 +7,17 @@ import MD from "./../../assests/md.jpg";
 import { SeeMore } from "./styles";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
+import { Item } from "./styles";
 import {
-  Item,
-  StyledBox,
-  StyledGrid,
-  TeamHeading,
-  TeamHeadingWrapper,
-  TeamText,
-} from "./styles";
+  Section,
+  Heading,
+  Discription,
+  MainWrapper,
+} from "../../components/common";
 
 // see  more button
 const ClickServices = () => {
-  console.log('hello')
+  console.log("hello");
 };
 
 const Team = () => {
@@ -47,34 +46,36 @@ const Team = () => {
   ];
 
   return (
-    <StyledBox>
+    <Section variant="primary">
       <Container>
-        <TeamHeadingWrapper>
-          <TeamHeading>Our Team</TeamHeading>
-          <TeamText>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Zahid
-          </TeamText>
-        </TeamHeadingWrapper>
-        <StyledGrid container spacing={[4]}>
-          {users.map((item, key) => (
-            <Grid item xs={12} sm={6} md={4} key={key}>
-              <Item>
-                <ProfileCard
-                  userImg={item.img}
-                  userName={item.name}
-                  userRole={item.role}
-                  userDetails={item.userDetails}
-                />
-              </Item>
-            </Grid>
-          ))}
-        </StyledGrid>
-        <SeeMore>
-            <Typography border={1} onClick={ClickServices}>See more <ArrowForwardIcon/> </Typography>
+        <Heading color="primary">Our Team</Heading>
+        <Discription color="primary" align="center">
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Zahid
+        </Discription>
+        <MainWrapper>
+          <Grid container spacing={[4]}>
+            {users.map((item, key) => (
+              <Grid item xs={12} sm={6} md={4} key={key}>
+                <Item>
+                  <ProfileCard
+                    userImg={item.img}
+                    userName={item.name}
+                    userRole={item.role}
+                    userDetails={item.userDetails}
+                  />
+                </Item>
+              </Grid>
+            ))}
+          </Grid>
+          <SeeMore>
+            <Typography onClick={ClickServices}>
+              See more <ArrowForwardIcon />{" "}
+            </Typography>
           </SeeMore>
+        </MainWrapper>
       </Container>
-    </StyledBox>
+    </Section>
   );
 };
 
