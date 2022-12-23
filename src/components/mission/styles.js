@@ -31,7 +31,7 @@ export const StyledBox = styled(Box)({
   position: "relative",
 });
 export const ImagesBox = styled(Box)({
-  padding: "200px 0px 150px 0px",
+  padding: "150px 0px 150px 0px",
   display: "flex",
   justifyContent: "center",
   position: "relative",
