@@ -26,7 +26,7 @@ export const MissionDesc = styled(Typography)({
 });
 
 export const StyledBox = styled(Box)({
-  padding: "200px 0px 150px 0px",
+  padding: "150px 0",
   backgroundColor: "#ffffff",
   position: "relative",
 });
@@ -69,5 +69,4 @@ export const TeamBox = styled(Box)({
 });
 export const TeamCards = styled(Box)({
   marginTop: "8rem",
-  marginBottom: "8rem",
 });

@@ -11,6 +11,8 @@ export const Section = styled(Box)((props) => ({
     props.variant === "primary"
       ? sectionVarients.primary.backgroundColor
       : sectionVarients.white.backgroundColor,
+  backgroundImage:
+    props.variant === "primary" ? sectionVarients.primary.backgroundImage : "",
 }));
 
 export const Heading = styled(Typography)`
