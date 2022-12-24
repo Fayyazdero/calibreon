@@ -20,7 +20,14 @@ import {
   ContactDetailsBox,
 } from "./styles";
 import { useLocation } from "react-router-dom";
-import { Instagram, LinkedIn, Twitter, Facebook, Phone, Mail } from "@mui/icons-material";
+import {
+  Instagram,
+  LinkedIn,
+  Twitter,
+  Facebook,
+  Phone,
+  Mail,
+} from "@mui/icons-material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const PersonalProfile = () => {
@@ -76,7 +83,7 @@ const PersonalProfile = () => {
             <Typography>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
+              eget.ss
             </Typography>
           </AccordionDetails>
         </CustomizeAccordion>

@@ -36,7 +36,7 @@ export const ServicesBox = styled(Box)({
   paddingLeft: "24px",
   paddingRight: "24px",
   paddingBottom: "24px",
-  marginTop: "-65px",
+  margin: "3rem 0"
 });
 export const GuidBox = styled(Box)({
   width: "100%",

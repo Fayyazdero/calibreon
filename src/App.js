@@ -10,6 +10,7 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import PersonalProfile from "./pages/personalProfile";
 import Services from "./pages/services";
+import Team from "./pages/team";
 
 function App() {
   return (
@@ -17,10 +18,11 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<HomePage />}></Route>
-        <Route exact path="/about" element={<About />}></Route>
-        <Route exact path="/contact" element={<Contact />}></Route>
-        <Route exact path="/home/contact/:name" element={<PersonalProfile />}></Route>
-        <Route exact path="/services" element={<Services />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/home/contact/:name" element={<PersonalProfile />}></Route>
+        <Route path="/services" element={<Services />}></Route>
+        <Route path="/team" element={<Team />}></Route>
       </Routes>
       <Footer />
     </div>
