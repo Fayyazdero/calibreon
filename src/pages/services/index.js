@@ -8,9 +8,7 @@ import Business from "../../assests/business.png";
 import Marketing from "../../assests/marketing.png";
 import { useNavigate } from "react-router-dom";
 import {
-  AboutHeading,
   StyledBox,
-  AboutDesc,
   MainBox,
   ServicesBox,
   GuidBox,
@@ -22,6 +20,7 @@ import {
 import ServicesCard from "../../components/servicesCard";
 import Viewed from "../../components/viewItems";
 import Button from "../../components/button";
+import Heading from "../../components/heading";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -79,12 +78,12 @@ const Services = () => {
         <Container>
           <Grid container spacing={[4]}>
             <Grid item xs={12} sm={12} md={8}>
-              <AboutHeading>Our Services</AboutHeading>
-              <AboutDesc>
-                KPMG combines our multi-disciplinary approach with deep,
+              <Heading
+                text="Our Services"
+                headingDesc=" KPMG combines our multi-disciplinary approach with deep,
                 practical industry knowledge to help clients meet challenges and
-                respond to opportunities.
-              </AboutDesc>
+                respond to opportunities."
+              />
             </Grid>
             <Grid item xs="none" sm="none" md={4}></Grid>
           </Grid>
@@ -127,8 +126,8 @@ const Services = () => {
       <ContactDetailsBox>
         <Container>
           <Details>
-            <AboutDesc variant="span">Are you Ready to </AboutDesc>
-            <AboutHeading variant="h3">Start with us</AboutHeading>
+            {/* <AboutDesc variant="span">Are you Ready to </AboutDesc> */}
+            <Heading text="Start with us" />
             <Button onClick={onClickContact}>Contact Us</Button>
           </Details>
         </Container>

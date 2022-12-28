@@ -6,22 +6,16 @@ import Fayyaz from "./../../assests/user.jpeg";
 import MD from "./../../assests/md.jpg";
 import { SeeMore } from "./styles";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
-import {
-  Item,
-  StyledBox,
-  StyledGrid,
-  TeamHeading,
-  TeamHeadingWrapper,
-  TeamText,
-} from "./styles";
-
-// see  more button
-const ClickServices = () => {
-  console.log('hello')
-};
+import { useNavigate } from "react-router-dom";
+import { Item, StyledBox, StyledGrid } from "./styles";
+import Heading from "../../components/heading";
 
 const Team = () => {
+  const navigate = useNavigate();
+
+  const ClickServices = () => {
+    navigate("/team");
+  };
   const users = [
     {
       name: "Mian Dad",
@@ -49,13 +43,12 @@ const Team = () => {
   return (
     <StyledBox>
       <Container>
-        <TeamHeadingWrapper>
-          <TeamHeading>Our Team</TeamHeading>
-          <TeamText>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Zahid
-          </TeamText>
-        </TeamHeadingWrapper>
+        <Heading
+          text="Our Team"
+          headingDesc="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Zahid"
+        />
+
         <StyledGrid container spacing={[4]}>
           {users.map((item, key) => (
             <Grid item xs={12} sm={6} md={4} key={key}>
@@ -71,8 +64,10 @@ const Team = () => {
           ))}
         </StyledGrid>
         <SeeMore>
-            <Typography border={1} onClick={ClickServices}>See more <ArrowForwardIcon/> </Typography>
-          </SeeMore>
+          <Typography border={1} onClick={ClickServices}>
+            See more <ArrowForwardIcon />{" "}
+          </Typography>
+        </SeeMore>
       </Container>
     </StyledBox>
   );
