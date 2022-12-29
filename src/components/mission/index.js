@@ -13,7 +13,6 @@ import Img1 from "../../assests/about-us-img-01.jpg";
 import Img2 from "../../assests/about-us-img-02.jpg";
 import Img3 from "../../assests/about-us-img-03.jpg";
 import TeamCard from "../../components/teamCard";
-import Contact from "../../pages/contact";
 import MD from "./../../assests/team.jpg";
 
 const Mission = () => {
@@ -80,7 +79,6 @@ const Mission = () => {
           </Grid>
         </TeamCards>
       </Container>
-      <Contact />
     </StyledBox>
   );
 };

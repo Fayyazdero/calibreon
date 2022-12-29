@@ -7,12 +7,14 @@ import {
   DetailsWrapper,
   TestimonialContentWrapper,
   RattingWrapper,
+  TestimonialCard,
 } from "./styles";
 
 const TestimonialsCard = ({ name, comment }) => {
   return (
-    <>
+    <TestimonialCard>
       <TestimonialWrapper>
+
         <TestimonialContentWrapper>
           <UserName>{name}</UserName>
           <DetailsWrapper>
@@ -23,7 +25,7 @@ const TestimonialsCard = ({ name, comment }) => {
           <Rating name="read-only" defaultValue={5} size="large" readOnly />
         </RattingWrapper>
       </TestimonialWrapper>
-    </>
+    </TestimonialCard>
   );
 };
 

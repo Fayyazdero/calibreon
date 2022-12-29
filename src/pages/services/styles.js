@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Typography, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import BgImg from "../../assests/guide.jpg";
 export const StyledBox = styled(Box)({
   padding: "200px 0px 150px 0px",
@@ -16,7 +16,7 @@ export const ServicesBox = styled(Box)({
   paddingLeft: "24px",
   paddingRight: "24px",
   paddingBottom: "24px",
-  marginTop: "-65px",
+  margin: "3rem 0",
 });
 export const GuidBox = styled(Box)({
   width: "100%",

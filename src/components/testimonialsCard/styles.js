@@ -20,15 +20,30 @@ export const UserName = styled.h4`
   line-height: 1.2;
   margin: 0;
 `;
+export const TestimonialCard = styled("div")({
+  position: "relative",
+  "&:before": {
+    content: `' '`,
+    position: "absolute",
+    height: "calc(100% + 40px)",
+    width: "50%",
+    top: "-20px",
+    background: "red",
+    left: "-20px",
+    zIndex: 0,
+  },
+});
 export const TestimonialWrapper = styled("div")({
   background: "#fff",
   textAlign: "center",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  padding: "90px 32px 44px",
+  padding: "70px 32px 24px",
+  margin: "20px 0",
   position: "relative",
-  boxShadow: "0px 8px 22px 15px #f54c0a inset",
+  // boxShadow: "1px 0px 39px 2px #fbb9a0 inset",
+  zIndex: 1,
 });
 
 export const TestimonialContentWrapper = styled("div")({
@@ -36,4 +51,7 @@ export const TestimonialContentWrapper = styled("div")({
 });
 export const RattingWrapper = styled("div")({
   position: "relative",
+  "& .MuiRating-root": {
+    color: "#f54c0a",
+  },
 });

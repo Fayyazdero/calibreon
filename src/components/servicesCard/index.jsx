@@ -8,11 +8,12 @@ import {
   ServicesDetails,
   DetailsWrapper,
   ServicesContentWrapper,
+  DetailsSection,
 } from "./styles";
 
-const ServicesCard = ({ serviceImg, serviceName, serviceDetails }) => {
+const ServicesCard = ({ serviceImg, serviceName, serviceDetails, active }) => {
   return (
-    <ServicesWrapper>
+    <ServicesWrapper active={active}>
       <ImageWrapper>
         <Image src={serviceImg} alt={serviceName} />
       </ImageWrapper>
@@ -22,7 +23,10 @@ const ServicesCard = ({ serviceImg, serviceName, serviceDetails }) => {
           <ServicesDetails>{serviceDetails}</ServicesDetails>
         </DetailsWrapper>
       </ServicesContentWrapper>
-      <ArrowForwardIcon />
+      <DetailsSection>
+        <ServicesDetails text="detail"> Read more</ServicesDetails>
+        <ArrowForwardIcon />
+      </DetailsSection>
     </ServicesWrapper>
   );
 };
