@@ -105,7 +105,7 @@ const HomePage = () => {
       <Slider />
       <Section>
         <Container>
-          <Heading>Our Services</Heading>
+          <Heading align="center">Our Services</Heading>
           <Discription align="center">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.
@@ -131,7 +131,7 @@ const HomePage = () => {
       </Section>
       <Section variant="primary">
         <Container>
-          <Heading color="primary">Our Team</Heading>
+          <Heading align="center" color="primary">Our Team</Heading>
           <Discription color="primary" align="center">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat. Zahid
@@ -161,7 +161,7 @@ const HomePage = () => {
       </Section>
       <Section>
         <Container>
-          <Heading>Testimonials</Heading>
+          <Heading align="center">Testimonials</Heading>
           <Discription align="center">
             Some testimonials from our customers
           </Discription>

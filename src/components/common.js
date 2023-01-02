@@ -25,7 +25,12 @@ export const Heading = styled(Typography)`
       : sectionVarients.white.color};
   font-weight: bold;
   line-height: 1;
-  text-align: ${(props) => (props.variant === "h4" ? "left" : "center")};
+  text-align: ${(props) =>
+    props.align === "center"
+      ? "center"
+      : props.align === "right"
+      ? "right"
+      : "left"};
   margin-top: ${(props) => (props.variant === "h4" ? "2.5rem" : "")};
   margin-bottom: ${(props) => (props.variant === "h3" ? "24px" : "")};
 `;
@@ -65,6 +70,7 @@ export const Discription = styled(Typography)((props) => ({
       : props.align === "right"
       ? "right"
       : "left",
+  fontWeight: props.weight === "bold" ? "bold" : "normal",
   padding: props.title === "details" ? "1rem" : "0",
   margin: props.title === "details" ? "0" : "",
   display: props.title === "more" ? "flex" : "",

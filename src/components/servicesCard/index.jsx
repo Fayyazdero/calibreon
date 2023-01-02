@@ -10,10 +10,21 @@ import {
   ServicesContentWrapper,
   DetailsSection,
 } from "./styles";
+import { useNavigate } from "react-router-dom";
 
 const ServicesCard = ({ serviceImg, serviceName, serviceDetails, active }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/services/${serviceName}`, {
+      state: {
+        serviceName: serviceName,
+        serviceImg: serviceImg,
+        serviceDetails: serviceDetails,
+      },
+    });
+  };
   return (
-    <ServicesWrapper active={active}>
+    <ServicesWrapper active={active} onClick={handleClick}>
       <ImageWrapper>
         <Image src={serviceImg} alt={serviceName} />
       </ImageWrapper>

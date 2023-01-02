@@ -10,6 +10,8 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import PersonalProfile from "./pages/personalProfile";
 import Services from "./pages/services";
+import ServicePage from "./pages/servicePage";
+
 import Team from "./pages/team";
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
         <Route path="/home/contact/:name" element={<PersonalProfile />}></Route>
         <Route path="/services" element={<Services />}></Route>
         <Route path="/team" element={<Team />}></Route>
+        <Route path="/services/:name" element={<ServicePage />}></Route>
       </Routes>
       <Footer />
     </div>
