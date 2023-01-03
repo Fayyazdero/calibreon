@@ -8,8 +8,6 @@ import Business from "../../assests/business.png";
 import Marketing from "../../assests/marketing.png";
 import { useNavigate } from "react-router-dom";
 import {
-  AboutHeading,
-  AboutDesc,
   MainBox,
   ServicesBox,
   GuidBox,
@@ -22,7 +20,7 @@ import ServicesCard from "../../components/servicesCard";
 import Viewed from "../../components/viewItems";
 import Button from "../../components/button";
 import MainSection from "../../components/layout/mainSection";
-import { MainWrapper } from "../../components/common";
+import { Heading, MainWrapper } from "../../components/common";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -113,8 +111,9 @@ const Services = () => {
       <ContactDetailsBox>
         <Container>
           <Details>
-            <AboutDesc variant="span">Are you Ready to </AboutDesc>
-            <AboutHeading variant="h3">Start with us</AboutHeading>
+            <Heading color={"primary"} align="center" variant="h3">
+              Start with us{" "}
+            </Heading>
             <Button onClick={onClickContact}>Contact Us</Button>
           </Details>
         </Container>

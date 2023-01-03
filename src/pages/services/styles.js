@@ -1,26 +1,6 @@
 import styled from "@emotion/styled";
-import { Typography, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import BgImg from "../../assests/guide.jpg";
-
-export const AboutHeading = styled(Typography)`
-  font-family: Poppins;
-  font-size: ${(props) => (props.variant === "h3" ? "40px" : "70px")};
-  color: #fff;
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: ${(props) => (props.variant === "h3" ? "24px" : "")}
-`;
-
-export const AboutDesc = styled(Typography)`
-  font-family: Poppins;
-  letter-spacing: 0.22px;
-  font-size: 22px;
-  color: #fff;
-  line-height: ${(props) => (props.variant === "span" ? "2.5" : "1.5")};
-  margin-top: 40px;
-  margin-bottom: ${(props) => (props.variant === "span" ? "24px" : "40px")};
-`;
-
 export const StyledBox = styled(Box)({
   padding: "200px 0px 150px 0px",
   backgroundColor: "#f54c0a",
@@ -36,7 +16,7 @@ export const ServicesBox = styled(Box)({
   paddingLeft: "24px",
   paddingRight: "24px",
   paddingBottom: "24px",
-  margin: "3rem 0"
+  margin: "3rem 0",
 });
 export const GuidBox = styled(Box)({
   width: "100%",

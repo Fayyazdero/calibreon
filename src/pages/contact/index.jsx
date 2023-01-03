@@ -1,7 +1,6 @@
 import React from "react";
 import MainSection from "../../components/layout/mainSection";
 import ContactForm from "../../components/contactForm";
-import { Container } from "@mui/material";
 import { Wrapper, Title, Para, MapSection } from "./styles";
 
 const Contact = () => {
