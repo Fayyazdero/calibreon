@@ -18,6 +18,7 @@ import {
   MainWrapper,
 } from "../../components/common";
 import { SeeMore, Item } from "./styles";
+import { users } from "../Data/users";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -74,29 +75,7 @@ const HomePage = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     },
   ];
-  const users = [
-    {
-      name: "Mian Dad",
-      role: "Bookkeeper",
-      img: MD,
-      userDetails:
-        "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
-    },
-    {
-      name: "Fayyaz",
-      role: "Web Developer",
-      img: Fayyaz,
-      userDetails:
-        "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
-    },
-    {
-      name: "Fayyaz",
-      role: "Web Developer",
-      img: Fayyaz,
-      userDetails:
-        "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
-    },
-  ];
+
   const ClickServices = () => {
     navigate("/services");
   };
