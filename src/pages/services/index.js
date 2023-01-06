@@ -111,8 +111,9 @@ const Services = () => {
       <ContactDetailsBox>
         <Container>
           <Details>
-            {/* <AboutDesc variant="span">Are you Ready to </AboutDesc> */}
-            <Heading text="Start with us" />
+            <Heading color={"primary"} align="center" variant="h3">
+              Start with us{" "}
+            </Heading>
             <Button onClick={onClickContact}>Contact Us</Button>
           </Details>
         </Container>

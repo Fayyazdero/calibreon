@@ -48,7 +48,7 @@ const ContactForm = () => {
       <Container>
         {location.pathname === "/contact" ? null : (
           <>
-            <Heading variant="h2" color={"primary"}>
+            <Heading variant="h2" color={"primary"} align="center">
               Get in Touch
             </Heading>
             <Discription color={"primary"} title="subheading" align="center">

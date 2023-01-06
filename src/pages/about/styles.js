@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Typography, Box } from "@mui/material";
+import { Box } from "@mui/material";
 
 export const StyledBox = styled(Box)({
   padding: "200px 0px 150px 0px",
