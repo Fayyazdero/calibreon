@@ -28,4 +28,10 @@ export const SeeMore = styled("span")`
   }
 `;
 
-export const DepartmentHeading = styled.h2``;
+export const DepartmentHeading = styled.h2`
+  padding: 5px 20px;
+`;
+export const TeamMembersWrapper = styled.div`
+  padding: 20px;
+  width: unset;
+`;

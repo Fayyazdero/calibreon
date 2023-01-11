@@ -9,8 +9,7 @@ import ServicesCard from "../../components/servicesCard";
 import TestimonialsCard from "../../components/testimonialsCard";
 import { Container, Grid, Typography } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import Fayyaz from "./../../assests/user.jpeg";
-import MD from "./../../assests/md.jpg";
+
 import {
   Section,
   Heading,
@@ -19,6 +18,7 @@ import {
 } from "../../components/common";
 import { SeeMore, Item } from "./styles";
 import { users } from "../Data/users";
+import Banner from "../banner";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -76,15 +76,31 @@ const HomePage = () => {
     },
   ];
 
+  const sliderData = [
+    {
+      title: "You're ready. So are we.",
+      imgLink:
+        "https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    },
+    {
+      title: "You're ready. So are we.",
+      imgLink:
+        "https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    },
+  ];
   const ClickServices = () => {
     navigate("/services");
   };
   return (
     <div>
-      <Slider />
+      <Slider slidesToShow={1}>
+        {sliderData.length &&
+          sliderData.map((item, index) => <Banner key={index} item={item} />)}
+      </Slider>
+
       <Section>
         <Container>
-          <Heading align="center">Our Services</Heading>
+          <Heading>Our Services</Heading>
           <Discription align="center">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.
@@ -110,7 +126,7 @@ const HomePage = () => {
       </Section>
       <Section variant="primary">
         <Container>
-          <Heading align="center" color="primary">Our Team</Heading>
+          <Heading color="primary">Our Team</Heading>
           <Discription color="primary" align="center">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat. Zahid
@@ -140,7 +156,7 @@ const HomePage = () => {
       </Section>
       <Section>
         <Container>
-          <Heading align="center">Testimonials</Heading>
+          <Heading>Testimonials</Heading>
           <Discription align="center">
             Some testimonials from our customers
           </Discription>
